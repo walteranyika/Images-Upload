@@ -170,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
                  $new_name=$x."_".$y.".".$ext;
                  $target_file = $target_dir .$new_name;
 
-
-                 $con = mysqli_connect("localhost","walteranyika","lydia@2010","uploads") or die('unable to connect to db');
+                 //fill in with correct credentilas
+                 $con = mysqli_connect("localhost","username","password","db_name") or die('unable to connect to db');
 
                  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file))
                  {
